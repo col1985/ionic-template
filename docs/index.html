@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>frontend-template</title>
+	<title>quickstart-template</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">frontend-template</a>
+					<a href="index.html" class="title">quickstart-template</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -56,7 +56,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> frontend-template</h1>
+			<h1> quickstart-template</h1>
 		</div>
 	</div>
 </header>
@@ -64,20 +64,42 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<p>This is a starter template for <a href="http://ionicframework.com/docs/">Ionic</a> projects.</p>
-				<h2 id="how-to-use-this-template">How to use this template</h2>
-				<p><em>This template does not work on its own</em>. The shared files for each starter are found in the <a href="https://github.com/ionic-team/ionic2-app-base">ionic2-app-base repo</a>.</p>
-				<p>To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the <a href="https://github.com/ionic-team/ionic2-app-base">Starter App Base</a>.</p>
-				<h3 id="with-the-ionic-cli-">With the Ionic CLI:</h3>
-				<p>Take the name after <code>ionic2-starter-</code>, and that is the name of the template to be used when using the <code>ionic start</code> command below:</p>
-				<pre><code class="lang-bash">$ sudo npm install -g ionic cordova
-$ ionic start mySideMenu sidemenu
+				<h1 id="development-spec-guidelines">Development Spec &amp; Guidelines</h1>
+				<h2 id="documentation">Documentation</h2>
+				<h2 id="git">git</h2>
+				<p>git-hooks are used to drive developer behaviour.</p>
+				<h3 id="git-commit-convention">git-commit convention</h3>
+				<p>git-hooks are used to guide or drive developer behaviour. git-commits should follow the following convention.</p>
+				<pre><code class="lang-bash">  [Sprint:TicketID] - Commit Message
 </code></pre>
-				<p>Then, to run it, cd into <code>mySideMenu</code> and run:</p>
-				<pre><code class="lang-bash">$ ionic cordova platform add ios
-$ ionic cordova run ios
-</code></pre>
-				<p>Substitute ios for android if not on a Mac.</p>
+				<h2 id="frameworks">Frameworks</h2>
+				<ul>
+					<li>Ionic 2 - <a href="https://github.com/ionic-team/ionic/compare/v3.7.0...v3.7.1">v3.7.1</a></li>
+					<li>Angular - <a href="https://github.com/angular/angular/blob/master/CHANGELOG.md#443-2017-09-19">v4.4.3</a></li>
+					<li>Protractor - <a href="https://github.com/angular/protractor/tree/5.1.2">v5.1.2</a></li>
+				</ul>
+				<h3 id="nodejs">NodeJS</h3>
+				<ul>
+					<li>Client: <a href="https://nodejs.org/docs/v6.9.5/api/">v6.9.5</a></li>
+					<li>Cloud: <a href="https://nodejs.org/docs/v6.9.1/api/">v6.9.1</a></li>
+				</ul>
+				<h2 id="dotfiles">dotFiles</h2>
+				<ul>
+					<li>.gitignore</li>
+					<li>.eslintrc</li>
+					<li>.editorconfig</li>
+					<li>.npmrc</li>
+				</ul>
+				<h2 id="extensions">Extensions</h2>
+				<h3 id="vscode">VSCode</h3>
+				<ul>
+					<li><a href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig">editorconfig</a></li>
+					<li><a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">eslint</a></li>
+					<li><a href="https://marketplace.visualstudio.com/items?itemName=glen-84.sass-lint">scss-lint</a></li>
+					<li><a href="https://marketplace.visualstudio.com/items?itemName=eg2.tslint">tslint</a></li>
+					<li><a href="https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint">markdownLint</a></li>
+				</ul>
+				<h3 id="sublime">Sublime</h3>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">

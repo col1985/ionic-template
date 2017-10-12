@@ -17,13 +17,6 @@
 
 # This example catches duplicate Signed-off-by lines.
 
-<<<<<<< HEAD
-echo "$1"
-# test "" = "$(grep '^[Sprint:SOS1234]: ' "$1" || {
-# 	echo >&2 Duplicate Signed-off-by lines.
-# 	exit 1
-# }
-=======
 
 COMMIT_REGEX="^\[.*?:.*?\] - .*?$"
 
@@ -36,4 +29,3 @@ else
   exit 1
 fi
 
->>>>>>> master

@@ -1,30 +1,41 @@
-var Reporter = require('jasmine-spec-reporter').SpecReporter;
+const Reporter = require('jasmine-spec-reporter').SpecReporter;
+const cfg = require('./tests/test-config');
 
 exports.config = {
-  allScriptsTimeout: 11000,
+  allScriptsTimeout: cfg.timeout,
   directConnect: true,
   capabilities: {
-    'browserName': 'chrome'
+    browserName: 'chrome',
+    chromeOptions: {
+      args: [
+        '--headless',
+        '--disable-gpu'
+      ]
+    },
   },
   framework: 'jasmine',
   jasmineNodeOpts: {
+    isVerbose: false,
     showColors: true,
-    defaultTimeoutInterval: 30000,
+    includeStackTrace: false,
+    defaultTimeoutInterval: 40000,
     print: function () { }
   },
-  specs: ['./e2e/**/*.e2e-spec.ts'],
+  specs: ['./tests/e2e/**/*.e2e-spec.ts'],
+  // specs: ['./src/**/*.spec.ts'],
   baseUrl: 'http://localhost:8100', // review when development starts
   useAllAngular2AppRoots: true,
   beforeLaunch: function () {
+
     // setup test server
     require('ts-node').register({
-      project: 'e2e'
+      project: 'tests/e2e/tsconfig.json'
     });
 
-    require('connect')().use(require('serve-static')('www')).listen(8100);
+    require('connect')().use(require('serve-static')(cfg.dist)).listen(cfg.port);
   },
   onPrepare: function () {
-    jasmine.getEnv().addReporter(new Reporter());
+    jasmine.getEnv().addReporter(new Reporter({ spec: { displayStacktrace: false } }));
   }
 
 }

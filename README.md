@@ -36,6 +36,8 @@ git-hooks are used to guide or drive developer behaviour. git-commits should fol
 
 ### VSCode
 
+Recommended VSCode Extensions.
+
 + [editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 + [eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 + [scss-lint](https://marketplace.visualstudio.com/items?itemName=glen-84.sass-lint)
@@ -43,3 +45,115 @@ git-hooks are used to guide or drive developer behaviour. git-commits should fol
 + [markdownLint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 
 ### Sublime
+
+Recommended Sublime Extensions.
+
+// TODO
+
+## CLI Tools
+
+### commit
+
+```bash
+npm run commit
+```
+
+### local development
+
+Run app locally in the browser. Linter is disabled in the wtahc config.
+
+```bash
+npm run serve
+```
+
+### lint
+
+Manually lint codebase.
+
+```bash
+npm run lint
+```
+
+### docs
+
+Generate source-code documentation using the Typedoc tool.
+
+```bash
+npm run docs
+```
+
+### tests
+
+```bash
+npm test
+```
+
+### clean
+
+```bash
+npm run ionic:build
+```
+
+### build
+
+```bash
+npm run build
+```
+
+### Ionic CLI Tools
+
+#### serve
+
+```bash
+npm run ionic:serve
+```
+
+#### build
+
+```bash
+npm run ionic:build
+```
+
+#### serve
+
+```bash
+npm run ionic:serve
+```
+
+### Webdriver-Manager commands
+
+#### clean
+
+```bash
+npm run wd-clean
+```
+
+#### status
+
+```bash
+npm run wd-status
+```
+
+#### start
+
+```bash
+npm run wd-start
+```
+
+#### update
+
+```bash
+npm run wd-update
+```
+
+#### stop
+
+```bash
+npm run wd-stop
+```
+
+#### version
+
+```bash
+npm run wd-version
+```

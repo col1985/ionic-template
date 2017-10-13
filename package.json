@@ -5,6 +5,7 @@
   "homepage": "http://redhat.com/",
   "private": true,
   "scripts": {
+    "commit": "git add . ; git commit",
     "wd-clean": "webdriver-manager clean",
     "wd-status": "webdriver-manager status",
     "wd-start": "webdriver-manager start",

@@ -11,12 +11,14 @@ function versionCheck {
     printf "\n"
     printf "Unable to " >&2
     printf "\n"
+    printf "\n"
     exit 1
   else
     printf "\n"
     printf "Correct NodeJS version: ${NODE_VERSION} found, continuing install process..." >&2
     printf "\n"
     printf "\n"
+    exit 0
   fi
 }
 

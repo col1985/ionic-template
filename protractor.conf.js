@@ -21,7 +21,9 @@ exports.config = {
     defaultTimeoutInterval: 40000,
     print: function () { }
   },
-  specs: ['./tests/e2e/**/*.e2e-spec.ts'],
+  specs: [
+    './tests/e2e/**/*.e2e-spec.ts'
+  ],
   // specs: ['./src/**/**/*.spec.ts'],
   baseUrl: 'http://localhost:8100', // review when development starts
   useAllAngular2AppRoots: true,

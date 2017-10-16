@@ -18,7 +18,13 @@
   ],
   "exclude": [
     "node_modules",
-    "src/**/*.spec.ts"
+    "src/**/*.spec.ts",
+    "tests",
+    "docs",
+    "targets",
+    "platforms",
+    "hooks",
+    "custom-hooks"
   ],
   "compileOnSave": false,
   "atom": {

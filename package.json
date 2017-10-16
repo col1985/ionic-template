@@ -13,7 +13,7 @@
     "wd-stop": "webdriver-manager shutdown",
     "wd-version": "webdriver-manager version",
     "test": "protractor",
-    "unit-test": "karma start ./test-config/karma.conf.js",
+    "unit-test": "karma start ./tests/unit/karma.conf.js",
     "docs": "typedoc --out ./docs ./src",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",

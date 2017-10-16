@@ -22,7 +22,7 @@ exports.config = {
     print: function () { }
   },
   specs: ['./tests/e2e/**/*.e2e-spec.ts'],
-  // specs: ['./src/**/*.spec.ts'],
+  // specs: ['./src/**/**/*.spec.ts'],
   baseUrl: 'http://localhost:8100', // review when development starts
   useAllAngular2AppRoots: true,
   beforeLaunch: function () {
@@ -32,7 +32,7 @@ exports.config = {
       project: 'tests/e2e/tsconfig.json'
     });
 
-    require('connect')().use(require('serve-static')(cfg.dist)).listen(cfg.port);
+    // require('connect')().use(require('serve-static')(cfg.dist)).listen(cfg.port);
   },
   onPrepare: function () {
     jasmine.getEnv().addReporter(new Reporter({ spec: { displayStacktrace: false } }));

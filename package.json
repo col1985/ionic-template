@@ -12,8 +12,6 @@
     "wd-update": "webdriver-manager update",
     "wd-stop": "webdriver-manager shutdown",
     "wd-version": "webdriver-manager version",
-    "preinstall": "./preinstall.sh",
-    "postinstall": "./postinstall.sh",
     "test": "protractor",
     "unit-test": "karma start ./test-config/karma.conf.js",
     "docs": "typedoc --out ./docs ./src",

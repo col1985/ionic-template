@@ -7,29 +7,27 @@ module.exports = function (config) {
     frameworks: ['jasmine'],
 
     // reporters configuration
-    reporters: ['mocha'],
+    // reporters: ['mocha'],
+    reporters: ['kjhtml', 'dots'],
 
-    files: [{
-      pattern: './karma-test-shim.js',
-      watched: true
-    }],
+    files: [{ pattern: './karma-test-shim.js', watched: true }],
 
     // reporter options
-    mochaReporter: {
-      colors: {
-        success: 'cyan',
-        info: 'bgGreen',
-        warning: 'yellow',
-        error: 'bgRed'
-      },
-      symbols: {
-        success: '+',
-        info: '#',
-        warning: '!',
-        error: 'x'
-      },
+    // mochaReporter: {
+    //   colors: {
+    //     success: 'cyan',
+    //     info: 'bgGreen',
+    //     warning: 'yellow',
+    //     error: 'bgRed'
+    //   },
+    //   symbols: {
+    //     success: '+',
+    //     info: '#',
+    //     warning: '!',
+    //     error: 'x'
+    //   },
       // output: 'autowatch'
-    },
+    // },
 
     preprocessors: {
       './karma-test-shim.js': ['webpack', 'sourcemap']

@@ -4,3 +4,5 @@
  * update list below.
  */
 
+export * from './api-validator.service';
+export * from './api.service';

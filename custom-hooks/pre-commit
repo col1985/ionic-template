@@ -25,7 +25,15 @@ function lint {
 # generate docs
 function docs {
   printf "\nAlmost there, generating documentation..\n"
-  npm run docs ; git add .
+  npm run docs
+
+  if [ "$?" != "0" ]; then
+    printf "\nLinting task has failed, please review code-style and fix." >&2
+    exit 1
+  else
+    git add .
+    exit 0
+  fi
 }
 
 tests

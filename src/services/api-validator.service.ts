@@ -8,7 +8,9 @@ export class ApiValidatorService {
 
   constructor(private url: string) {
     sway.create({ definition: url })
-      .then((swaggerApi) => this.setSchema(swaggerApi))
+      .then((swaggerApi) => {
+        this.setSchema(swaggerApi)
+      })
       .catch((err) => console.log(err))
   }
 
@@ -29,8 +31,36 @@ export class ApiValidatorService {
     return schema.getPaths();
   }
 
-  getPath(route: string): any {
-    return this.schema.getPath(route)
+  getPath(route: string, method: string): any {
+    let schema = this.getSchema()
+    return schema.getPath(route, method)
+  }
+
+  validatePath(uri: string, route: string, method: string) {
+    let schema = this.getSchema()
+    let path = schema.getPath(route, method)
+    path.api.validate();
+    path.getOperations().forEach(op => {
+      console.log(op)
+    });
+  }
+
+  validatePostReq(body: any, path: string, method: string) {
+    let schema: any = this.getSchema()
+    let pathObj: any = schema.getPath(path, method)
+
+    console.log(pathObj.api.validate());
+
+
+    pathObj.getOperations().forEach(op => {
+      // console.log(op.validateRequest({ body: body }))
+      let result = op.validateRequest({ body: body });
+      if (result && result.errors.length > 0) {
+        return false;
+      } else {
+        result.warnings.forEach((msg) => console.warn(msg))
+      }
+    });
   }
 
   getOperations(): any[] {

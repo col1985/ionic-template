@@ -3,14 +3,14 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>{{ 'HOME' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-list>
       <ion-item>
-          <button ion-button secondary (click)="doGet()">Get Pet</button>
+          <button ion-button secondary (click)="doGet()">{{ 'GET_PET_BTN' | translate }}</button>
       </ion-item>
   </ion-list>
 </ion-content>

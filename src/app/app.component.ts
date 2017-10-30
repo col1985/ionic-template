@@ -1,7 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, Config } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { TranslateService } from '@ngx-translate/core';
 
 import { HomePage, ListPage } from '../pages/';
 
@@ -18,7 +19,9 @@ export class MyApp {
   constructor(
     public platform: Platform,
     public statusBar: StatusBar,
-    public splashScreen: SplashScreen
+    public splashScreen: SplashScreen,
+    private config: Config,
+    private translate: TranslateService
   ) {
     this.initializeApp();
 
@@ -36,6 +39,23 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+    });
+    this.initTranslate();
+  }
+
+  initTranslate() {
+    // Set the default language for translation
+    // strings, and the current language.
+    this.translate.setDefaultLang('en');
+
+    if (this.translate.getBrowserLang() !== undefined) {
+      this.translate.use(this.translate.getBrowserLang());
+    } else {
+      this.translate.use('en'); // Set your language here
+    }
+
+    this.translate.get(['BACK_BUTTON_TEXT']).subscribe(values => {
+      this.config.set('ios', 'backButtonText', values.BACK_BUTTON_TEXT);
     });
   }
 

@@ -4,10 +4,10 @@
 
 + [App](src/app/APP.md)
 + [Directives](src/directives/DIRECTIVES.md)
-+ [Models](src/pages/MODELS.md)
++ [Models](src/models/MODELS.md)
 + [Pages](src/pages/PAGES.md)
-+ [Providers](src/directives/DIRECTIVES.md)
-+ [Pipes](src/pages/PAGES.md)
++ [Providers](src/providers/PROVIDERS.md)
++ [Pipes](src/pipes/PIPES.md)
 + [Design Guidelines](src/theme/DESIGN_GUIDELINES.md)
 
 ### Developer Information

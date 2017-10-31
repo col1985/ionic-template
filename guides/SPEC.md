@@ -25,7 +25,6 @@ Useful resources and other information for the developer.
 Dot files that are used within the client template.
 
 + .gitignore
-+ .eslintrc
 + .editorconfig
 + .npmrc
 

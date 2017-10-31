@@ -1,5 +1,5 @@
 {
-  "name": "quickstart-template",
+  "name": "client-template",
   "version": "0.0.1",
   "author": "Colum Bennett <cbennett@redhat.com>",
   "homepage": "http://redhat.com/",
@@ -14,7 +14,7 @@
     "wd-version": "webdriver-manager version",
     "e2e": "protractor",
     "karma": "karma start ./test-config/karma.conf.js",
-    "unit": "./node_modules/.bin/ts-mocha -p ./src/**/*.spec.ts",
+    "unit": "npm run karma",
     "test": "npm run unit",
     "docs": "typedoc --out ./docs ./src",
     "clean": "ionic-app-scripts clean",

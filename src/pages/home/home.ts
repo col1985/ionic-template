@@ -17,7 +17,7 @@ export class HomePage {
     this.api.setBaseUrl('http://petstore.swagger.io/v2');
   }
 
-  doGet() {
-    this.api.doGet('/pet', '/1').subscribe(res => console.log(res))
+  doGet(id: string) {
+    this.api.doGet('/pet', '/' + id).subscribe(res => console.log(res))
   }
 }

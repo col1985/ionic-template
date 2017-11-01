@@ -1,4 +1,14 @@
-## Template Spec & Guidelines
+# Template Spec & Guidelines
+
+## Prerequisites
+
+To run the unit and e2e tests on your machine, install Karma, Protractor and Web-driver Manager globally.
+
+Enter command:
+
+```bash
+npm i -g karma protractor webdriver-manager
+```
 
 ### Application Components
 
@@ -12,14 +22,15 @@
 
 ### Developer Information
 
-+ [Spec](guide/SPEC.md)
-+ [Toolings](guide/CLI-TOOLS.md)
-+ [i18n](guide/i18n.md)
-+ [Tests](guide/TESTS.md)
++ [Using the Template](guides/CREATE_A_NEW_APP.md)
++ [Spec](guides/SPEC.md)
++ [Toolings](guides/CLI-TOOLS.md)
++ [i18n](guides/i18n.md)
++ [Tests](guides/TESTS.md)
 
 ### Cordova
 
-+ [Cordova](guide/CORDOVA.md)
++ [Cordova](guides/CORDOVA.md)
 
 ### Ionic
 

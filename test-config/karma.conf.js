@@ -14,7 +14,7 @@ module.exports = function (config) {
         pattern: './karma-test-shim.js',
         watched: true
       },
-      '../src/assets/i18n/*.json'
+      // '../src/assets/i18n/*.json'
     ],
 
     // reporter options

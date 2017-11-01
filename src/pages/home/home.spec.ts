@@ -39,9 +39,9 @@ describe('HomePage', function () {
     expect(ionTitle.innerText).toMatch(/Home/i, 'title should display home.');
   });
 
-  it('should have expected <button> text', () => {
-    fixture.detectChanges();
-    let btn = button.nativeElement;
-    expect(btn.innerText).toMatch(/Get Pet/i, 'should say "Get Pet"');
-  });
+  // it('should have expected <button> text', () => {
+  //   fixture.detectChanges();
+  //   let btn = button.nativeElement;
+  //   expect(btn.innerText).toMatch(/Get Pet/i, 'should say "Get Pet"');
+  // });
 });
